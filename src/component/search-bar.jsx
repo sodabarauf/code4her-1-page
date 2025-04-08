@@ -1,14 +1,15 @@
 import React from "react";
 import { FiSearch, FiMapPin } from "react-icons/fi";
 
-
 export default function SearchBar() {
   return (
     <div className="flex gap-2 bg-gray-100 p-4 rounded-3xl shadow w-full max-w-3xl mx-auto mt-6">
       <div className="flex gap-2 items-center bg-white p-3 mx-auto rounded-3xl shadow w-full max-w-3xl">
+            {/* Search icon */}
         <FiSearch />
         <input type="text" placeholder="Find a job" className="flex-1 p-2 rounded-full outline-none" />
         <div className="w-px h-8 bg-gray-500"></div>
+            {/* Location icon*/}
         <FiMapPin />
         <select className=" py-2 rounded-full text-gray-600">
           <option>Localization</option>
