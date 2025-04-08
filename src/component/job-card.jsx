@@ -24,7 +24,7 @@ const JobCard = ({ job }) => {
       </div>
 
       {/* Salary + Time */}
-      <div className="flex justify-between items-center text-sm text-gray-500">
+      <div className="flex justify-between items-center text-sm">
         <span className="flex items-center gap-1">
           <FiDollarSign className="text-pink-400" />
           {job.salary}
