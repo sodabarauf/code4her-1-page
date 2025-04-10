@@ -1,19 +1,28 @@
-import jobs from "@/data/jobs";
-import JobCard from "./job-card";
+import React from "react";
+import jobs from "../data/jobs";
 
-const JobList = () => {
+const JobList = ({ onSelect }) => {
   return (
-    <div className="p-6 bg-gray-100 rounded-2xl">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-bold">Search Results</h2>
-        <p className="text-sm text-gray-500">1.100 results found</p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {jobs.map((job) => (
-          <JobCard key={job.id} job={job} />
-        ))}
-      </div>
+    <div className="grid grid-cols-2 gap-4">
+      {jobs.map((job) => (
+        <div
+          key={job.id}
+          onClick={() => onSelect(job)}
+          className="bg-white p-4 rounded-3xl cursor-pointer shadow"
+        >
+          <img src={job.logo} alt={job.company} className="h-8 mb-2" />
+          <h2 className="font-semibold">{job.title}</h2>
+          <p className="text-sm text-gray-500">{job.company}</p>
+          <div className="flex flex-wrap gap-2 mt-2">
+            {job.tags.map((tag, idx) => (
+              <span key={idx} className="bg-gray-200 px-2 py-1 text-xs rounded">
+                {tag}
+              </span>
+            ))}
+          </div>
+          <div className="text-sm text-pink-600 font-medium mt-2">{job.salary}</div>
+        </div>
+      ))}
     </div>
   );
 };

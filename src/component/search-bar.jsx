@@ -3,7 +3,7 @@ import { FiSearch, FiMapPin } from "react-icons/fi";
 
 export default function SearchBar() {
   return (
-    <div className="flex gap-2 bg-gray-100 p-4 rounded-3xl shadow w-full max-w-3xl mx-auto mt-6">
+    <div className="flex gap-2 bg-gray-200 p-4 rounded-3xl shadow w-full max-w-3xl mt-6">
       <div className="flex gap-2 items-center bg-white p-3 mx-auto rounded-3xl shadow w-full max-w-3xl">
             {/* Search icon */}
         <FiSearch />
@@ -15,7 +15,7 @@ export default function SearchBar() {
           <option>Localization</option>
         </select>
       </div>
-      <button className="px-10 py-3 mx-2 bg-pink-500 text-white rounded-3xl text-xl">Search</button>
+      <button className="px-10 py-3 mx-2 bg-pink-500 hover:bg-pink-600 text-white rounded-3xl text-xl">Search</button>
     </div>
   );
 }

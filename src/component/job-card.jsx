@@ -1,5 +1,4 @@
 import { FiClock, FiDollarSign } from "react-icons/fi";
-
 const JobCard = ({ job }) => {
   return (
     <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
@@ -29,7 +28,6 @@ const JobCard = ({ job }) => {
           <FiDollarSign className="text-pink-400" />
           {job.salary}
         </span>
-        <span className="text-xs">{job.time}</span>
       </div>
     </div>
   );
