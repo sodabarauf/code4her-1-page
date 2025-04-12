@@ -1,4 +1,4 @@
-import { FiClock, FiDollarSign } from "react-icons/fi";
+import { HiOutlineBriefcase } from "react-icons/hi";
 const JobCard = ({ job }) => {
   return (
     <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
@@ -25,7 +25,7 @@ const JobCard = ({ job }) => {
       {/* Salary + Time */}
       <div className="flex justify-between items-center text-sm">
         <span className="flex items-center gap-1">
-          <FiDollarSign className="text-pink-400" />
+          <HiOutlineBriefcase className="text-pink-400" />
           {job.salary}
         </span>
       </div>
